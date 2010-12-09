@@ -1,0 +1,80 @@
+/*!
+ * BASSE
+ * Copyright 2010, illarra.com
+ * https://github.com/illarra/basse
+ */
+
+/* Headings */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-weight:bold;
+}
+.h1, h1 { font-size:2.5em; }
+.h2, h2 { font-size:2em; }
+.h3, h3 { font-size:1.6em; }
+.h4, h4 { font-size:1.3em; }
+.h5, h5 { font-size:1.1em; }
+.h6, h6 { font-size:1.1em; }
+
+/* Paragraphs */
+.p1 { font-size:1.3em; }
+.p2 { font-size:1.2em; }
+.p3 { font-size:1.1em; }
+.p4, p { font-size:1em; line-height:1.3; }
+.p5 { font-size:.9em; }
+.p6, small { font-size:.8em; line-height:1.2; }
+
+/* Quotes */
+cite {}
+q {}
+
+/* Links */
+a { text-decoration:underline; }
+a.clean, a.clean:hover { color:inherit; text-decoration:none; border:0; }
+
+/* Icons */
+.i, i {
+  display:inline-block; overflow:hidden;
+  vertical-align:-10%; *vertical-align:middle; text-indent:-999em;
+  background-image:url(sprite.png);
+  height:16px; width:16px;
+}
+.i32 { height:32px; width:32px; }
+
+.iAdd { background-position:0 0; }
+.iEdit { background-position:0 -16px; }
+.iDelete { background-position:0 -32px; }
+
+/* Buttons */
+.b, b, button {}
+.b1 {}
+.b2 {}
+.b3 {}
+.b4, b {}
+.b5 {}
+.b6 {}
+
+/* Font weights */
+.strong, strong, em { font-weight:bold; }
+.normal { font-weight:normal; }
+.weak { font-weight:normal; color:#999; }
+.dead { font-weight:normal; color:#ccc; }
+
+/* Font families and styles */
+.sans { font-family:arial,sans-serif; }
+.serif { font-family:georgia,serif; }
+.monospace, code, pre { font-family:monospace; }
+.italic { font-style:italic; }
+
+/* Text transform */
+.uc { text-transform:uppercase; }
+.lc { text-transform:lowercase; }
+.capital { text-transform:capitalize; }
+
+/* Display
+NOTE that there is no "hidden" class.
+We recomended to use an inline 'style="display:hidden;"', specially
+if you are going to use a JS library like jQuery to .show() or .hide()
+the elements afterwards.
+*/
+.in { display:inline; }
+.block { display:block; }
