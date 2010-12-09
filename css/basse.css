@@ -72,7 +72,7 @@ a.clean, a.clean:hover { color:inherit; text-decoration:none; border:0; }
 
 /* Display
 NOTE that there is no "hidden" class.
-We recomended to use an inline 'style="display:hidden;"', specially
+We recomended to use an inline 'style="display:none;"', specially
 if you are going to use a JS library like jQuery to .show() or .hide()
 the elements afterwards.
 */
