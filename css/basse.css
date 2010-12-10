@@ -29,7 +29,7 @@ The others, preferably not.
 /* Links */
 a { color:#07c; text-decoration:underline; }
 a:hover, a:focus { text-decoration:none; }
-a:focus {background-color:#ffc; }
+a:focus { background-color:#ffc; }
 a:visited { color:#666; }
 
 /* Quotes */
@@ -69,7 +69,8 @@ because the <b> element is deprecated: use <strong> instead.
 th { font-weight:bold; }
 
 /* List styles */
-ul.icons li { margin-left:20px; text-indent:-20px; list-style-type:none; }
+ul.icons li { margin-left:20px; list-style-type:none; }
+ul.icons i:first-child { float:left; margin-left:-20px; }
 ul.bullets li { margin-left:20px; list-style:disc outside; }
 ol.decimals li { margin-left:20px; list-style:decimal outside; }
 
