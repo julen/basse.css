@@ -6,30 +6,55 @@
     <link rel="stylesheet" type="text/css" href="https://github.com/stubbornella/oocss/raw/master/core/spacing/space.css" />
     <link rel="stylesheet" type="text/css" href="css/basse.css" />
     <style>
-      body { margin: auto; width: 960px; }
+      body { width:960px; margin:auto; padding:50px 0; }
+      .sidebar { padding-top:140px; }
     </style>
   </head>
   <body>
     <div class="yui3-g">
       <div class="yui3-u-3-5">
-        <h1>Lorem ipsum title</h1>
-        <p class="p1 serif">Vivamus id mollis quam. <i class="iAdd">[add icon]</i> <a href="#/add">Add something</a> or <i class="iEdit">[edit icon]</i> <a href="#/edit">Edit existing entry</a>. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu.
+        <h1>What is basse?</h1>
+        <p class="p1">
+          Basse is a collection of CSS classes that can be used as a starting point for any web project. It's focused on the non-layout elements, and contains some tips to avoid the "mass-reproduction of classes".
         </p>
-        <h2>Lorem ipsum title</h1>
-        <p class="p2">Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu.
+        <h2>The idea behind</h2>
+        <p class="p3">
+          Everybody knows that when you use a <code>&lt;h1&gt;</code> element you are going to have a bigger heading title than when you use an <code>&lt;h3&gt;</code>: it has a semantical meaning that is is generally translated to the design.
+          <em>basse</em> tries to use that same logic with other elements like paragraphs or buttons.
+          It is easy for a developer to remember that the biggest paragraph is <code>&lt;p class="p1"&gt;&lt;/p&gt;</code>. For example, the paragraph that you are reading is a <code>p3</code>, just bigger than normal, smaller than a <code>p2</code>.
         </p>
-        <h3>Lorem ipsum title</h1>
-        <p class="p3">Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu.
+        <p>
+          As a convention, in <em>basse</em> the 'normal' size <strong>is 4</strong>. Everything below 4 (3,2,1) is 'big', and 5 or 6 are used for 'smaller' sizes. 2 and 1 sizes are intended to be highly customizable, but for the rest is recommended to play only with sizes and minor changes.
         </p>
-        <h4>this text is not a code, but could be</h1>
-        <code class="p4">Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu.
-        </code>
+        <p>
+          On the other hand, <strong>not all sizes are required</strong>. It will depend on the design, but we recommend to have at least 3 sizes: <strong>1, 4 and 6</strong>. All the different elements (headings, paragraphs, buttons) should match with each other when used on the same size: try to respect proportions.
+        </p>
+        <h3 class="h2"><code>&lt;b&gt;</code> is not a button and <code>&lt;i&gt;</code> is not an icon</h3>
+        <p class="p4">True. But nowhere says that <i class="iDelete">[delete icon]</i> you can't break the rules. Anyway, we have decided that we we are going to use [[TODO]]... (By the way, this paragraph has a <code>p4</code> class, but is <em>unnecessary</em>).
+        </p>
+        <pre class="p3">
+Paragraph classes can be applied to other
+block elements to control font sizes.
+<em>basse</em> is not strict at all: this is a
+&lt;pre&gt; element with a <strong>p3</strong> class.
+But it won't work if the style is very
+customized. Using <strong>p1</strong> in this case will give us
+a <span class="p1 p3">serif text on blue</span> (in this case, tricked).
+        </pre>
       </div>
-      <div class="yui3-u-2-5">
-        <h2 class="h3 normal">This title is normal, not bold</h1>
+      <div class="yui3-u-2-5 sidebar">
+        <h2 class="p3">Here comes the menu!</h2>
+        <ul class="icons">
+          <li><i class="iGit">[github]</i> <a href="https://github.com/illarra/basse">View the source code in <em>github</em></a></li>
+          <li><i class="iAdd">[add]</i> <a href="http://iuumi.com/">Learn more about the website where it all began</a>, <em>iuumi</em>, our little project for carpooling (<i class="iHelp">[help]</i> sorry, all this spam was to have a long text here).</li>
+        </ul>
+        <h3 class="normal">This title is normal, not bold</h3>
         <p class="p5 weak"><em>This text is weak, but still alive.</em> Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.
         </p>
-        <p class="p6 dead"><em>This text is dead, that's why you can't see it.</em> Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu.
+        <p class="p6 dead">
+          <em>This text is dead, that's why you can't see it.</em>
+          It's the kind of text where banks will hide their legal notices.
+          We don't like this kind of text, that's why we killed it.
         </p>
       </div>
     </div>
