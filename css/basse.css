@@ -39,8 +39,8 @@ q {}
 /* Icons */
 .i, i {
   display:inline-block; overflow:hidden;
-  line-height:0; font-size:0; vertical-align:text-bottom; *vertical-align:middle;
-  text-indent:-999em; *text-indent:0; /* Here there are some IE hacks */
+  line-height:0; font-size:0; color:transparent;
+  vertical-align:text-bottom; *vertical-align:middle; /* IE Hack */
   background-image:url(sprite.png); background-repeat:no-repeat;
   height:16px; width:16px;
   cursor:default;
