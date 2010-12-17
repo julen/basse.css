@@ -1,6 +1,8 @@
 /*!
- * BASSE
- * https://github.com/illarra/basse
+ * basse.css
+ * Basic CSS class collection.
+ *
+ * https://github.com/illarra/basse.css
  */
 
 /* Headings */
@@ -29,7 +31,6 @@ p { font-size:1em; line-height:1.35; }
 /* Links */
 a {
   color:#07c; text-decoration:underline;
-  line-height:inherit; margin:0; padding:0;
 }
 a:hover, a:focus { text-decoration:none; }
 a:focus { background-color:#ffc; }
