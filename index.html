@@ -13,33 +13,72 @@
   <body>
     <div class="yui3-g">
       <div class="yui3-u-3-5">
-        <h1>What is basse?</h1>
+        <h1>What is basse.css?</h1>
         <p class="p1">
-          Basse is a collection of CSS classes that can be used as a starting point for any web project. It's focused on the non-layout elements, and contains some tips to avoid the "mass-reproduction of classes".
+          Basse.css is a collection of <abbr title="Cascading Style Sheets">CSS</abbr> classes that can be used as a starting point for any web project. It's focused on the non-layout elements, and contains some tips to avoid the "mass-reproduction of classes".
         </p>
         <h2>The idea behind</h2>
         <p class="p3">
           Everybody knows that when you use a <code>&lt;h1&gt;</code> element you are going to have a bigger heading title than when you use an <code>&lt;h3&gt;</code>: it has a semantical meaning that is is generally translated to the design.
-          <em>basse</em> tries to use that same logic with other elements like paragraphs or buttons.
+          <em>basse.css</em> tries to use that same logic with other elements like paragraphs or buttons.
           It is easy for a developer to remember that the biggest paragraph is <code>&lt;p class="p1"&gt;&lt;/p&gt;</code>. For example, the paragraph that you are reading is a <code>p3</code>, just bigger than normal, smaller than a <code>p2</code>.
         </p>
         <p>
-          As a convention, in <em>basse</em> the 'normal' size <strong>is 4</strong>. Everything below 4 (3,2,1) is 'big', and 5 or 6 are used for 'smaller' sizes. 2 and 1 sizes are intended to be highly customizable, but for the rest is recommended to play only with sizes and minor changes.
+          As a convention, in <em>basse.css</em> the 'normal' size <strong>is 4</strong>. Everything below 4 (3,2,1) is 'big', and 5 or 6 are used for 'smaller' sizes. And then of course, you have the <code>.big</code> and <code>.small</code> classes that change the size of any inline element.
         </p>
-        <p>
-          On the other hand, <strong>not all sizes are required</strong>. It will depend on the design, but we recommend to have at least 3 sizes: <strong>1, 4 and 6</strong>. All the different elements (headings, paragraphs, buttons) should match with each other when used on the same size: try to respect proportions.
+        <p class="p1 small">
+          Combine them with care: you are risking to fall to the <mark>dark side</mark> of CSS hacks.
         </p>
         <h3 class="h2"><code>&lt;b&gt;</code> is not a button and <code>&lt;i&gt;</code> is not an icon</h3>
-        <p class="p4">True. But nowhere says that <i class="iDelete">[delete]</i> you can't break the rules. Anyway, we have decided that we we are going to use [[TODO]]... (By the way, this paragraph has a <code>p4</code> class, but is <em>unnecessary</em>).
+        <p class="p4">
+          True. But nowhere says that you can't break the rules. Anyway, we have decided that we we are going to use the 'classic' italic <code>&lt;i&gt;</code> element, now deprecated, for <strong>icons</strong>. The <code>&lt;b&gt;</code> element is also deprecated, but we are just going to steal a class for buttons (<code>.b</code>). As explained later, just don't use <code>&lt;b&gt;</code>. (By the way, this paragraph has a 'normal size' <code>p4</code> class, but is <em>unnecessary</em>, so it doesn't exist in the CSS file).
+        </p>
+        <h4>Icons</h4>
+        <p>
+          <i class="iHelp">[help]</i> Easy to use, and with little markup.
+        </p>
+        <h4>Buttons</h4>
+        <p>
+          You can use a <code>.b</code> class for making a button from any element (for example, a link), but if you really need a button, we encourage you to use a <code>&lt;button&gt;</code> or <code>&lt;input type="submit" /&gt;</code>. In this case  <strong>a <code>&lt;b&gt;</code> has no semantical sense and won't work</strong>.
+        </p>
+        <p>
+          Normal:
+          <button>Button</button>
+          <input type="submit" value="This is a [input] submit button" />
+          <a href="#/button" class="b strong">A link with <code>.b</code> and <code>.strong</code> classes</a>
+        </p>
+        <p>
+          With icons:
+          <button><i class="iGit">[github]</i></button>
+          <button><i class="iAdd">[add]</i> Add</button>
+          <button><i class="iDelete">[delete]</i> Delete</button>
+          <a href="#/ask" class="b"><i class="iHelp">[help]</i> Ask a question</a>
+        </p>
+        <p>
+          Sizes:
+          <button class="big">Big</button>
+          <button>Normal</button>
+          <span class="b small">Small</span>
+        </p>
+        <p class="p6">
+          <strong>Note:</strong> this is what happens when you place a <button class="small">small button</button> inside a <code>.p6</code>.
+        </p>
+        <p class="p3 weak">
+          <strong>Hack:</strong> and this is what happens when you place a <button class="sup strong"><code>.sup .strong</code></button> inside a bigger paragraph.
+        </p>
+        <h3 class="h2">Combinations</h3>
+        <p>
+          You can mix this basic classes to achieve different things. As we said before, just be careful with the dark side...
         </p>
         <pre class="p3">
 Paragraph classes can be applied to other
-block elements to control font sizes.
+block elements to control sizes and appearence.
 <em>basse</em> is not strict at all: this is a
 &lt;pre&gt; element with a <strong>p3</strong> class.
 But it won't work if the style is very
 customized. Using <strong>p1</strong> in this case will give us
-a <span class="p1 p3">serif text on blue</span> (in this case, tricked).
+a <span class="p1 small">serif text on blue</span> (in this case, the blue text
+should be bigger, but is hacked with a .small class).
         </pre>
       </div>
       <div class="yui3-u-2-5 sidebar">
