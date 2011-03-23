@@ -130,7 +130,23 @@ the elements afterwards.
 .fr { float:right; }
 
 /* Clearfix */
-.clearfix {}
+/* for compliant browsers */
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: '.';
+  height: 0;
+  visibility: hidden;
+}
+/* affects only IE7 */
+.clearfix {
+  min-width: 0;
+}
+/* targets only IE5-6 and hidden from lowly IEmac \*/
+* html .clearfix {
+  height: 1%;
+} 
+/* end hide IEmac */
 
 /* Browser hacks */
 @-moz-document url-prefix() {
