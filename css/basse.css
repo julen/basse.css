@@ -89,8 +89,8 @@ ol.decimals li { list-style:decimal outside; }
 /* Font weights */
 .strong, strong, em { font-weight:bold; }
 .normal { font-weight:normal; }
-.weak { font-weight:normal; color:#999; }
-.dead { font-weight:normal; color:#ccc; }
+.weak { font-weight:normal; color:#999; border-color:#999; }
+.dead { font-weight:normal; color:#ccc; border-color:#ccc; }
 
 /* Font families and styles */
 .sans { font-family:"Arial",sans-serif; }
@@ -113,7 +113,7 @@ ol.decimals li { list-style:decimal outside; }
 
 /* Others */
 abbr, acronym {
-  border-style:dotted; border-color:inherit; border-bottom-width:1px;
+  border-style:dotted; border-color:inherit; border-width:0 0 1px 0;
   cursor:help;
 }
 .mark, mark { color:inherit; background-color:#ff6; }
